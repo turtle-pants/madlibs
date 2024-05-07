@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+  <title>MadLibs Example</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<h1> funny story </h2>
+<form name="myForm" method = "get" id="myForm">
+    <label for="adj1">Enter an adjective:<br> </label>
+    <input type="text" id="adj1" name="adj1">
+    <p></p>
+    
+    <label for="verb1">Enter an verb: <br></label>
+    <input type="text" id="verb1" name="verb1">
+    <p></p>
+    
+    <label for="verb2">Enter an verb: <br></label>
+    <input type="text" id="verb2" name="verb2">
+    <p></p>
+    
+    <label for="noun1">Enter a noun: <br></label>
+    <input type="text" id="noun1" name="noun1">
+    <p></p>
+    
+    <label for="noun2">Enter a noun: <br></label>
+    <input type="text" id="noun2" name="noun2">
+    <p></p>
+    
+    <label for="noun3">Enter a noun: <br></label>
+    <input type="text" id="noun3" name="noun3">
+    <p></p>
+    
+    <label for="adverb1">Enter an adverb: <br></label>
+    <input type="text" id="adverb1" name="adverb1">
+    <p></p>
+
+    <label for="adj2">Enter an adjective: <br></label>
+    <input type="text" id="adj2" name="adj2">
+    <p></p>
+    
+    <label for="adj3">Enter an adjective: <br></label>
+    <input type="text" id="adj3" name="adj3">
+    <p></p>
+    
+    <label for="name1">Enter a name: <br></label>
+    <input type="text" id="name1" name="name1">
+    <p></p>
+
+    <label for="number">Select a Number</label>
+        <select id="number" name="color">
+        <option value="one">1</option>
+        <option value="two">2</option>
+        <option value="three">3</option>
+        <option value="four">4</option>
+        <option value="five">5</option>
+        <option value="six">6</option>
+        <option value="seven">7</option>
+     </select><br>
+    <br>
+    
+    <label for="noun4">Enter a plural noun: <br></label>
+    <input type="text" id="noun4" name="noun4">
+    <p></p>
+    
+    <label for="gname">Enter a group name: <br></label>
+    <input type="text" id="gname" name="gname">
+    <p></p>
+    
+
+    <input type="submit" value="Show Story">
+    
+    
+    
+    
+    
+</form>
+<!--This is where the story will go (between div)-->
+
+<div id="formContents" class="finalstory"> </div>
+<script>
+//Get the form element
+    var form = document.getElementById("myForm");
+    
+//Add event listener for form submission
+
+    form.addEventListener("submit", function(event){
+        event.preventDefault();
+        //Get the input values inside the boxes
+        var name1 = document.getElementById("name1").value;
+        var adj1 = document.getElementById("adj1").value;
+        var verb1 = document.getElementById("verb1").value;
+        var verb2 = document.getElementById("verb2").value;
+        var noun1 = document.getElementById("noun1").value;
+        var noun2 = document.getElementById("noun2").value;
+        var noun3 = document.getElementById("noun3").value;
+        var adverb1 = document.getElementById("adverb1").value;
+        var adj2 = document.getElementById("adj2").value;
+        var adj3 = document.getElementById("adj3").value;
+        var noun4 = document.getElementById("noun4").value;
+        var gname = document.getElementById("gname").value;
+        var number = document.getElementById("number").value;
+        
+        //Get the location to place the story
+    
+        var putStory = document.getElementById("formContents");
+        
+        //Display the story
+        
+        putStory.innerHTML = "The year is 2995, and alien overlords had enslaved mankind on planet Earth. They created a " + adj1 + " hell where no humans could " + verb1 + 
+        " or " + verb2 +". Every " + noun1 + ", " + noun2 + ", and " + noun3 + " had been "
+        + adverb1 + " destroyed. It was a quite " + adj2 + " place. But inside a/an " + adj3 + " lab, " + 
+        " Dr. " + name1 + " had frozen " + number + " warriors to save us. Known in the ancient "  + noun4 +
+        " only as the " + gname + ".";
+    
+    });
+</script>
+<!-- The year is 2995, and alien overlords had enslaved mankind on planet Earth
+. They created a (adj) hell where no humans could (verb) or (verb). Every (noun), (noun), and (noun) had been
+(adverb) destroyed. It was a quite (adjective) place. But inside an (adjective) lab,
+Dr. (name) had frozen (numbers) warriors to save us. Known in the ancient (pl noun)
+only as the (band name).-->
+</body>
+
+</html>

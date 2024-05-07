@@ -1,0 +1,22 @@
+body {
+      background-image: linear-gradient(45deg, purple, lightblue);
+
+}
+
+h1 {
+    color: black;
+    text-align: center;
+    
+}
+
+form {
+    text-align: center;
+}
+
+.finalstory {
+    text-align: center;
+    color: white;
+    font-size: 28px;
+    
+
+}
